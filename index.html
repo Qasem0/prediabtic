@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>أنت بخير؟!</title>
@@ -6,39 +6,12 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-<div id="font-controls">
-  <button id="increase-font">زيادة حجم الخط</button>
-  <button id="decrease-font">تقليل حجم الخط</button>
-</div>
-
-<script>
-  // Get the body element
-  const body = document.body;
-  
-  // Set initial font size in pixels
-  let currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
-
-  // Increase font size
-  document.getElementById('increase-font').addEventListener('click', () => {
-    currentFontSize += 1; // Increase by 1px
-    body.style.fontSize = currentFontSize + 'px';
-  });
-
-  // Decrease font size
-  document.getElementById('decrease-font').addEventListener('click', () => {
-    currentFontSize -= 1; // Decrease by 1px
-    if (currentFontSize >= 12) { // Set a minimum font size to prevent too small text
-      body.style.fontSize = currentFontSize + 'px';
-    }
-  });
-</script>
 
 <h1>أنت بخير؟! </h1>
 
 <form oninput="togglePregnancyQuestion()">
 
   <p>١. كم عمرك؟</p>
-  
   <input type="radio" id="age1" name="age" value="0">
   <label for="age1">أصغر من ٤٠ سنة</label><br>
   <input type="radio" id="age2" name="age" value="1">
@@ -47,7 +20,7 @@
   <label for="age3">59 – 50 سنة</label><br>
   <input type="radio" id="age4" name="age" value="3">
   <label for="age4">60 سنة أو أكثر</label><br>
-</p>
+
   <p>2. هل أنت ذكر أو أنثى؟</p>
   <input type="radio" id="male" name="gender" value="1">
   <label for="male">ذكر</label><br>
@@ -91,6 +64,33 @@
   <button type="button" onclick="calculateScore()">احسب النقاط</button>
 </form>
 
+
+
+ <div id="font-controls">
+    <button id="increase-font">زيادة حجم الخط</button>
+    <button id="decrease-font">تقليل حجم الخط</button>
+  </div>
+<script>
+  // Get the body element
+  const body = document.body;
+  
+  // Set initial font size in pixels
+  let currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+
+  // Increase font size
+  document.getElementById('increase-font').addEventListener('click', () => {
+    currentFontSize += 1; // Increase by 1px
+    body.style.fontSize = currentFontSize + 'px';
+  });
+
+  // Decrease font size
+  document.getElementById('decrease-font').addEventListener('click', () => {
+    currentFontSize -= 1; // Decrease by 1px
+    if (currentFontSize >= 12) { // Set a minimum font size to prevent too small text
+      body.style.fontSize = currentFontSize + 'px';
+    }
+  });
+</script>
 
 
 </body>
