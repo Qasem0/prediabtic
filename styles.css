@@ -73,3 +73,32 @@ label {
   margin-top: 10px;
   display: inline-block;
 }
+
+
+#calculate-button {
+  background-color: #4CAF50; /* اللون الأساسي الأخضر */
+  border: none;
+  color: white; /* لون النص */
+  padding: 15px 32px; /* مسافة داخلية للزر */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* حجم الخط */
+  margin: 20px auto; /* جعل المسافة بين الزر والعناصر الأخرى */
+  cursor: pointer;
+  border-radius: 8px; /* زوايا دائرية للزر */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* تأثيرات الانتقال */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+}
+
+#calculate-button:hover {
+  background-color: #45a049; /* تغيير اللون عند التمرير */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+#calculate-button:active {
+  background-color: #3e8e41; /* لون الزر عند الضغط */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إعادة الظل كما كان */
+  transform: translateY(2px); /* تأثير الضغط عند النقر */
+}
+

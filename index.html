@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>أنت بخير؟!</title>
@@ -61,10 +61,12 @@
   <label for="weight">الوزن (كغ):</label>
   <input type="number" id="weight" name="weight"><br>
 
-  <button type="button" onclick="calculateScore()">احسب النقاط</button>
+
+ <button type="button" id="calculate-button" onclick="calculateScore()">احسب النقاط</button>
+  
 </form>
 
-
+<div id="result"></div>
 
  <div id="font-controls">
     <button id="increase-font">زيادة حجم الخط</button>
