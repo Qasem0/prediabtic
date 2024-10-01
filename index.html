@@ -65,6 +65,32 @@
 </form>
 
 <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+<div style="text-align: center;">
+  <button id="increase-font">زيادة حجم الخط</button>
+  <button id="decrease-font">تقليل حجم الخط</button>
+</div>
+
+<script>
+  // Get the body element
+  const body = document.body;
+  
+  // Set initial font size in pixels
+  let currentFontSize = parseFloat(window.getComputedStyle(body).fontSize);
+
+  // Increase font size
+  document.getElementById('increase-font').addEventListener('click', () => {
+    currentFontSize += 1; // Increase by 1px
+    body.style.fontSize = currentFontSize + 'px';
+  });
+
+  // Decrease font size
+  document.getElementById('decrease-font').addEventListener('click', () => {
+    currentFontSize -= 1; // Decrease by 1px
+    if (currentFontSize >= 12) { // Set a minimum font size to prevent too small text
+      body.style.fontSize = currentFontSize + 'px';
+    }
+  });
+</script>
 
 </body>
 </html>
