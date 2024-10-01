@@ -1,12 +1,40 @@
+/* Base font size for desktop and larger screens */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
   padding: 0;
   background-color: #e0f7e9; /* أخضر فاتح */
   color: #333;
-   direction: rtl;
+  direction: rtl;
   text-align: right;
   padding: 20px;
+  font-size: 16px; /* Base font size */
+}
+
+/* Adjust font-size based on screen width */
+@media (max-width: 1200px) {
+  body {
+    font-size: 1.5vw; /* Adjust for large screens */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 3.5vw; /* Adjust for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 4vw; /* Adjust for small smartphones */
+  }
+}
+
+/* Extra styling for very small screens */
+@media (max-width: 360px) {
+  body {
+    font-size: 4.5vw; /* Smaller smartphones, increase text size slightly */
+  }
 }
 
 form {
@@ -16,7 +44,6 @@ form {
   max-width: 600px;
   margin: 0 auto;
 }
-
 
 h1 {
   text-align: center;
