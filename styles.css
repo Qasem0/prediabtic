@@ -30,13 +30,13 @@ body {
   }
 }
 
-/* Extra styling for very small screens */
 @media (max-width: 360px) {
   body {
-    font-size: 4.5vw; /* Smaller smartphones, increase text size slightly */
+    font-size: 4.5vw; /* Adjust for very small smartphones */
   }
 }
 
+/* Form styling */
 form {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
@@ -49,17 +49,23 @@ h1 {
   text-align: center;
 }
 
-button {
-  display: block;
-  margin: 20px auto;
+/* Button styling (bold and in one line) */
+#font-controls {
+  text-align: center;
+}
+
+#font-controls button {
+  display: inline-block;
+  margin: 10px 10px;
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold; /* Bold text */
 }
 
-button:hover {
+#font-controls button:hover {
   background-color: #45a049;
 }
 
